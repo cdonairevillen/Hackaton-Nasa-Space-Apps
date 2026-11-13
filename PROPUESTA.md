@@ -169,10 +169,12 @@ Endpoints:
 
 ### 4.6 Despliegue
 
-- **Frontend:** estático en Vercel o Netlify.
+- **Frontend:** estático en Firebase Hosting, que redirige `/api/**` a Cloud Run (mismo dominio, sin CORS).
 - **Backend:** Google Cloud Run (lo conocemos de hourli-fy).
 - **Base de datos:** Postgres gestionado (Supabase o Neon).
 - **Docker Compose** solo para el desarrollo local. Lo que se entrega es la URL pública.
+
+Detalle completo en `docs/DEPLOY.md`.
 
 ---
 
@@ -192,7 +194,9 @@ junior-astronaut/
 ├── docs/
 │   ├── decisions.md              # registro de decisiones (qué, por qué, cuándo)
 │   ├── changelogs.md             # registro de cambios
-│   └── DATA_SOURCES.md           # datasets de la NASA usados y por qué
+│   ├── DATA_SOURCES.md           # datasets de la NASA usados y por qué
+│   ├── DEPLOY.md                 # despliegue en Google Cloud / Firebase
+│   └── DONKI.md                  # cómo pedir y usar los datos de DONKI
 │
 ├── backend/
 │   ├── pyproject.toml
